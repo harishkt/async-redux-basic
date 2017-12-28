@@ -1,0 +1,8 @@
+// Action Types started by network
+export const FETCH_SUBREDDIT_REQUEST = 'FETCH_SUBREDDIT_REQUEST';
+export const RECEIVE_SUBREDDIT_ERROR = 'RECEIVE_SUBREDDIT_ERROR';
+export const RECEIVE_SUBREDDIT_RESPONSE = 'RECEIVE_SUBREDDIT_RESPONSE';
+
+// Action types initiated by user
+export const SELECT_SUBREDDIT = 'SELECT_SUBREDDIT';
+export const REFRESH_SUBREDDIT = 'REFRESH_SUBREDDIT'
