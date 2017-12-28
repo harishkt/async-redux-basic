@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchData } from '../actions/networkActions';
+import { fetchData, safeFetch } from '../actions/networkActions';
 import { connect } from 'react-redux';
 
 let SearchBar = ({ onSubmit }) => {
@@ -20,7 +20,7 @@ let SearchBar = ({ onSubmit }) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onSubmit: (payload) => dispatch(fetchData(payload))
+		onSubmit: (payload) => dispatch(safeFetch(payload))
 	}
 };
 SearchBar = connect(null, mapDispatchToProps)(SearchBar);

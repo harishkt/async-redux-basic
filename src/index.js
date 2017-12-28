@@ -5,13 +5,15 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import './index.css';
 import App from './App';
-import rootReducer, {currentSearch} from './reducers';
+import rootReducer from './reducers';
 /*import { fetchData } from './actions/networkActions'*/
 import registerServiceWorker from './registerServiceWorker';
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+
 /*store
 	.dispatch(fetchData('reactjs'))
 	.then(() => console.log(store.getState()));*/
+
 ReactDOM.render(
 	<Provider store={store}>
 		<App />

@@ -10,6 +10,7 @@ let SearchResults = ({ stories }) => {
 
 };
 const mapStateToProps = (state) => {
+	console.log(`state is ${JSON.stringify(state)}`);
 	const { currentSearch, data } = state;
 	const relevantStoryData = data[currentSearch] || {};
 	const storyList = relevantStoryData["stories"] || [];
