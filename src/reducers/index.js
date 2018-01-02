@@ -3,7 +3,6 @@ import * as actionTypes from '../actions/actionTypes'
 
 
 export const currentSearch = (state = null, action) => {
-	console.log(`Entered selectedSubReddit reducer - ${state}`);
 	switch(action.type) {
 		case actionTypes.SELECT_SUBREDDIT:
 			return action.subreddit;
@@ -19,7 +18,6 @@ export const posts = (state  = { isFetching: false, isRefreshed: false, stories:
 		case actionTypes.REFRESH_SUBREDDIT:
 			return Object.assign({}, state, { isRefreshed: true });
 		case actionTypes.RECEIVE_SUBREDDIT_RESPONSE:
-			console.log('Entered RECEIVE_SUBREDDIT_RESPONSE');
 			return Object.assign({}, state, {
 				isFetching: false,
 				isRefreshed: false,

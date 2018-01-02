@@ -39,6 +39,7 @@ export const safeFetch = (subreddit) => (dispatch, getState) => {
 	dispatch(selectSubReddit(subreddit));
 	// Look for data already exists in history, to avoid request over wire
    // if data exists then just dispatch - receive response with data or else dispatch fetchData with subreddit
+	const state = getState();
 	if (subRedditExistsInCache(subreddit, state)) {
 		const results = state.data[subreddit].stories;
 		dispatch(receiveResponse(subreddit, results))
