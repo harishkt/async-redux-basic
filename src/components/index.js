@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 /*const StoryList = ({ stories }) => (
 	<ul>
@@ -24,6 +25,9 @@ const SearchBar = ({ onSubmit }) => {
 		</form>
 	);
 };
+SearchBar.propTypes = {
+	onSubmit: PropTypes.func.isRequired
+}
 
 const mainPage = ({ onSubmit }) => {
 	return(
@@ -33,7 +37,9 @@ const mainPage = ({ onSubmit }) => {
 		</div>
 	)
 };
-
+mainPage.propTypes = {
+	onSubmit: PropTypes.func.isRequired
+}
 export default mainPage;
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 let SearchResults = ({ stories }) => {
 	return(
@@ -9,6 +10,13 @@ let SearchResults = ({ stories }) => {
 		);
 
 };
+SearchResults.propTypes = {
+	stories: PropTypes.arrayOf(PropTypes.shape({
+		story: PropTypes.shape({
+			title: PropTypes.string
+		})
+	}))
+}
 const mapStateToProps = (state) => {
 	const { currentSearch, data } = state;
 	const relevantStoryData = data[currentSearch] || {};

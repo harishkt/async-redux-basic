@@ -1,5 +1,6 @@
 import React from 'react';
 import { fetchData, safeFetch } from '../actions/networkActions';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 let SearchBar = ({ onSubmit }) => {
@@ -17,6 +18,10 @@ let SearchBar = ({ onSubmit }) => {
 		</form>
 	);
 };
+
+SearchBar.propTypes = {
+	onSubmit: PropTypes.func.isRequired
+}
 
 const mapDispatchToProps = (dispatch) => {
 	return {
